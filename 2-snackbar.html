@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar-HW-10-JS</title>
+    <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-Bds21JRF.css">
+  </head>
+  <body>
+    <a class="link-back" href="./index.html">Back</a>
+
+    <form class="form">
+      <label class="delay-label">
+        Delay (ms)
+        <input class="delay-input" type="number" name="delay" required />
+      </label>
+
+      <fieldset class="state-set">
+        <legend>State</legend>
+        <label class="state-label">
+          <input type="radio" name="state" value="fulfilled" required />
+          Fulfilled
+        </label>
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Rejected
+        </label>
+      </fieldset>
+
+      <button class="create-btn" type="submit">Create notification</button>
+    </form>
+
+  </body>
+</html>
