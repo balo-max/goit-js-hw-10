@@ -7,7 +7,6 @@ const startButton = document.querySelector('[data-start]');
 const inputEl = document.querySelector('#datetime-picker');
 
 startButton.disabled = true;
-startButton.style.backgroundColor = "#fb6c6c";
 
 let userSelectedDate; 
 
@@ -22,16 +21,14 @@ const options = {
         if (userSelectedDate <= options.defaultDate) {
             iziToast.warning({
               title: 'Warning',
-              message: 'Please choose a date in the future!',
+              message: 'Please choose a date in the future!'
             });
 
-            startButton.style.backgroundColor = "#fb6c6c";
             startButton.disabled = true;
 
             return;
         } else {
             startButton.disabled = false;
-            startButton.style.backgroundColor = "#96f99d";
         }
 
         console.log(selectedDates[0]);
@@ -53,7 +50,6 @@ const timer = {
         this.intervalId = setInterval(() => {
             inputEl.disabled = true;
             startButton.disabled = true;
-            startButton.style.backgroundColor = "#fb6c6c";
 
             const ms = this.deadline - Date.now();
 
@@ -69,14 +65,12 @@ const timer = {
             this.elements.minutes.textContent = this.pad(timeComponents.minutes);
             this.elements.seconds.textContent = this.pad(timeComponents.seconds);
 
-            console.log(ms);
         }, 1000);
     },
 
     stop() {
         clearInterval(this.intervalId);
         startButton.disabled = true;
-        startButton.style.backgroundColor = "#fb6c6c";
         inputEl.disabled = false;
 
         location.reload();
