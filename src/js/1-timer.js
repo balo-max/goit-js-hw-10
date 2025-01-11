@@ -18,7 +18,7 @@ const options = {
     onClose(selectedDates) {  
         userSelectedDate = selectedDates[0];
 
-        if (userSelectedDate <= options.defaultDate) {
+        if (userSelectedDate <= new Date()) {
             iziToast.warning({
               title: 'Warning',
               message: 'Please choose a date in the future!'
@@ -72,8 +72,6 @@ const timer = {
         clearInterval(this.intervalId);
         startButton.disabled = true;
         inputEl.disabled = false;
-
-        location.reload();
     },
 
     convertMs(ms) {
